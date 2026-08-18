@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教學練習系統｜總覽</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f7fb; --card: #ffffff; --ink: #1c2833; --muted: #7a7a8c;
+    --en: #1f5fad; --en-dark: #1a3f6f;
+    --cn: #C0392B; --cn-dark: #922B21;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Nunito', 'Noto Sans TC', sans-serif;
+    background: var(--bg); color: var(--ink);
+    min-height: 100vh; padding: 40px 20px 60px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 40px; }
+  header .emoji { font-size: 2.6em; margin-bottom: 6px; }
+  header h1 { font-size: 1.9em; font-weight: 900; color: #2C3E50; margin-bottom: 6px; }
+  header p { color: var(--muted); font-size: 0.95em; }
+
+  .subject-block { margin-bottom: 44px; }
+  .subject-title {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 1.25em; font-weight: 900; margin-bottom: 18px;
+    padding-bottom: 8px; border-bottom: 3px solid;
+  }
+  .subject-title.en { color: var(--en); border-color: var(--en); }
+  .subject-title.cn { color: var(--cn); border-color: var(--cn); }
+
+  .grade-group { margin-bottom: 22px; }
+  .grade-label {
+    font-size: 0.8em; font-weight: 800; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;
+  }
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 14px;
+  }
+  .unit-card {
+    background: var(--card); border-radius: 14px; padding: 20px;
+    box-shadow: var(--shadow); text-decoration: none; color: inherit;
+    display: block; border: 2px solid transparent; transition: all 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .unit-card::after {
+    content: ''; position: absolute; top:0; left:0; right:0; height: 4px;
+  }
+  .unit-card.en::after { background: var(--en); }
+  .unit-card.cn::after { background: var(--cn); }
+  .unit-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.14); }
+  .unit-card.en:hover { border-color: var(--en); }
+  .unit-card.cn:hover { border-color: var(--cn); }
+  .unit-card .icon { font-size: 1.6em; margin-bottom: 8px; }
+  .unit-card .name { font-weight: 800; font-size: 1.05em; margin-bottom: 4px; }
+  .unit-card .desc { font-size: 0.85em; color: var(--muted); line-height: 1.5; }
+  .unit-card .tag {
+    display: inline-block; margin-top: 10px; font-size: 0.72em; font-weight: 800;
+    padding: 3px 10px; border-radius: 20px; background: #f0f4f8; color: var(--muted);
+  }
+  .unit-card.external .tag { background: #FDEBD0; color: #B9770E; }
+
+  footer { text-align: center; margin-top: 50px; color: var(--muted); font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="emoji">📚</div>
+    <h1>教學練習系統</h1>
+    <p>依科目與年級分類，點卡片進入該單元的互動練習</p>
+  </header>
+
+  <!-- 英文區 -->
+  <section class="subject-block">
+    <div class="subject-title en">🔤 英文</div>
+
+    <div class="grade-group">
+      <div class="grade-label">高一</div>
+      <div class="card-grid">
+        <a class="unit-card en" href="units/g1-l2.html">
+          <div class="icon">✈️</div>
+          <div class="name">L2 單字練習</div>
+          <div class="desc">My Mouth's in Airplane Mode! ｜ 12 字，分 4 組</div>
+          <span class="tag">基礎練習</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="grade-group">
+      <div class="grade-label">高二</div>
+      <div class="card-grid">
+        <a class="unit-card en" href="units/g2-l2.html">
+          <div class="icon">⛵</div>
+          <div class="name">L2 單字練習</div>
+          <div class="desc">Boat Schools ｜ 12 字，分 4 組</div>
+          <span class="tag">基礎練習</span>
+        </a>
+        <a class="unit-card en" href="units/g2-l3.html">
+          <div class="icon">🌿</div>
+          <div class="name">L3 單字練習</div>
+          <div class="desc">Progress and Preservation ｜ 12 字，分 4 組</div>
+          <span class="tag">基礎練習</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="grade-group">
+      <div class="grade-label">高頻字 / 文法專項</div>
+      <div class="card-grid">
+        <a class="unit-card en" href="units/infinitive.html">
+          <div class="icon">📝</div>
+          <div class="name">動詞不定詞</div>
+          <div class="desc">V + to V｜13 字，單組直測</div>
+          <span class="tag">文法專項</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 國文區 -->
+  <section class="subject-block">
+    <div class="subject-title cn">📖 國文</div>
+
+    <div class="grade-group">
+      <div class="grade-label">高二</div>
+      <div class="card-grid">
+        <a class="unit-card cn external" href="https://codepen.io/mmdybhbk-the-lessful/full/pvEemOb" target="_blank" rel="noopener">
+          <div class="icon">🧠</div>
+          <div class="name">第四課　潛藏在認知裡的「錯誤知識」</div>
+          <div class="desc">三種錯誤知識／情境判斷／詞彙配對／選擇題</div>
+          <span class="tag">尚未轉入系統 → 原始版本</span>
+        </a>
+        <a class="unit-card cn external" href="https://codepen.io/mmdybhbk-the-lessful/full/wBzmvjy" target="_blank" rel="noopener">
+          <div class="icon">📜</div>
+          <div class="name">第五課　諫逐客書</div>
+          <div class="desc">課文架構／四君配對／比喻判斷／選擇題／重要句子</div>
+          <span class="tag">尚未轉入系統 → 原始版本</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    英文單元已改用共用引擎（資料驅動），新增單字只需新增一份 data 檔案；<br>
+    國文因每課活動設計差異較大，暫先連結原始 CodePen 版本，之後可再評估共用架構。
+  </footer>
+</div>
+</body>
+</html>
